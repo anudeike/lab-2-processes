@@ -1,5 +1,11 @@
-signals: signal.c
-	gcc signal.c -o signalab
+# lab-2-Signals/Makefile
+# Ikechukwu Anude
 
-timer: timer.c
-	gcc timer.c -o timer  
+output: main.o
+	gcc main.o -o output
+
+main.o: main.c
+	gcc -c main.c
+
+clean:
+	*.o
